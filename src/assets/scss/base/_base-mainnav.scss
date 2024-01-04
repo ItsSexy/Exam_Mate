@@ -1,0 +1,196 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+/* ==============================
+MAIN NAV
+=============================== */
+
+.mainnav {
+
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+
+  height: calc(60 / 16 * 1rem);
+
+  padding-inline: 36px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.mainnav__logo {
+
+  margin-inline-end: auto;
+
+}
+
+.mainnav__item {
+
+  height: calc(30/16*1rem);
+  display: flex;
+  align-items: center;
+
+}
+
+.mainnav__img {
+
+  width: 100%;
+  max-height: 100%;
+
+}
+
+.mainnav__list {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: calc(78 / 16 * 1rem);
+  list-style: none;
+
+}
+
+/* ==============================
+MOBILE NAV
+=============================== */
+
+.mobilenav {
+
+  display: none;
+  z-index: 9999;
+  max-width: 100%;
+
+  overflow: hidden;
+
+}
+
+/* visible mobilenav */
+
+.mobilenav__visible {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+
+  height: calc(60 / 16 * 1rem);
+  padding-inline: 36px;
+
+}
+
+.visible__list {
+
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* hidden mobilenav */
+
+.mobilenav__hidden {
+
+  background-color: var(--color-background-dark);
+  color: var(--color-text-light);
+
+  height: 100vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: calc(60 / 16 * 1rem) 1fr;
+
+  position: fixed;
+  top: 0;
+  left: 100%;
+  transition: all 0.5s ease-in-out;
+
+
+
+  z-index: 9999;
+}
+
+.hidden__top {
+
+  grid-area: 0 1;
+
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+  padding-inline: 36px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden__list {
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+
+}
+
+.hidden__item {
+
+  --font-size : calc(24 / 16 * 1rem);
+
+  font-size: var(--font-size);
+  font-weight: 600;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.hidden__item:hover {
+
+  background-color: var(--color-green-300);
+  cursor: pointer;
+
+}
+
+/* ==============================
+QUERIES
+=============================== */
+
+@media all and (max-width: 750px) {
+
+  .mainnav {
+    display: none;
+  }
+
+  .mobilenav {
+    display: block;
+  }
+
+}
+
+.fluidimg {
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+}
