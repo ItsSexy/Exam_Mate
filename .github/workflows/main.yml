@@ -1,0 +1,15 @@
+name: Netlify Deploy
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@v4
+    - name: Deploy production to Netlify
+      uses: South-Paw/action-netlify-deploy@v1.2.0
+      with:
+        netlify-auth-token: ${{ secrets.MY_SECRET_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        build-dir: './dist'
+        comment-on-commit: true
