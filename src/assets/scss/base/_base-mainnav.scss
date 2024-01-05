@@ -1,11 +1,8 @@
-* {
+a, a:hover {
 
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  color: var(--color-text-light);
 
 }
-
 /* ==============================
 MAIN NAV
 =============================== */
@@ -14,6 +11,7 @@ MAIN NAV
 
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
+  color: red;
 
   height: calc(60 / 16 * 1rem);
 
