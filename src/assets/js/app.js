@@ -23,3 +23,75 @@ function OnCloseNav(e){
     bodyEl.style.overflow = "scroll";
 
 }
+
+/* ==============================
+=DROPDOWN
+=============================== */
+
+const dropdownitemsEl = document.querySelectorAll(".dropdown__item")
+var dropdownCrossEl = document.querySelectorAll(".selected__img")
+const templateSelectedEl = document.querySelector(".template__selected")
+const templateSelectedMoreEl = document.querySelector(".template__selectedMore")
+
+dropdownitemsEl.forEach(el => {
+
+    el.addEventListener("click", OnDropdownItem)
+
+});
+
+function OnDropdownItem(e) {
+
+    let el = e.target 
+    let elParent = document.querySelector(`.selected__${el.dataset.parent}`)
+
+    SpawnSelected(el, elParent)
+
+}
+
+function SpawnSelected(el, elParent) {
+
+    const parentSize = elParent.querySelectorAll("li").length
+    console.log(parentSize)
+
+    if(parentSize == 3) {
+
+        const clone = templateSelectedMoreEl.content.cloneNode(true);
+        let template = clone.querySelector("li");
+        
+        elParent.appendChild(template)
+
+    }else if(parentSize < 3) {
+
+        const clone = templateSelectedEl.content.cloneNode(true);
+        let template = clone.querySelector("li");
+        template.querySelector(".selected__text").textContent = `${el.dataset.value}`
+        
+        elParent.appendChild(template)
+
+    }
+
+    //Stocker le param
+    UpdateSelected()
+
+
+}
+
+function OnCrossClick(e) {
+    
+    const el = e.target
+    const elParent = el.closest("li")
+    elParent.remove()
+
+}
+
+function UpdateSelected() {
+
+    dropdownCrossEl = document.querySelectorAll(".selected__img")
+    dropdownCrossEl.forEach(el => {
+    
+        el.addEventListener("click", OnCrossClick)
+    
+    });
+
+
+}
