@@ -2,23 +2,139 @@
 permalink: /shop.html
 ---
 
+{% set sizes = ["XS", "S", "M", "L", "XL", "XXL"] %}
+{% set colls = ["Asmterdam '99", "Knokke '89", "Ardennes '20"] %}
+{% set types = [{ name : 'T-shirt', quantity : 12}, { name : 'Hoodie', quantity : 12}, { name : 'Short', quantity : 12}, { name : 'Beanie', quantity : 12}, { name : 'Cap', quantity : 12}, { name : 'Throusers', quantity : 12}, { name : 'Patchs', quantity : 12}] %}
+
 {% extends "layouts/base.njk" %}
 
 {% block content %}
 
-    <h1>Shop</h1>
 
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
-    <div class="s-section">Section 1</div>
+
+    <div class="s-section">
+
+        <form method="POST">
+
+            <div class="filters">
+
+                <div class="filter__sizes filter__checkbox filter">
+                    <p class="filter__title">sizes</p>
+
+                        {% for size in sizes %}
+                            
+                            {% if loop.first %}
+
+                                <ul class="checkbox__list">
+                                
+                            {% endif %}
+
+                                <li class="checkbox__item">
+                                    <label class="checkbox__label">
+                                        <input class="checkbox__box" type="checkbox" value="{size}">
+                                        <span class="checkbox__custom"></span>
+                                        {{size}}
+                                    </label>
+                                </li>
+
+                            {% if loop.last %}
+
+                                </ul>
+                                
+                            {% endif %}
+
+                        {% endfor %}
+                </div>
+
+                <div class="filter__collection filter__dropdown filter">
+                    <p class="filter__title">collection</p>
+
+                    <div class="dropdown__content">
+
+                        <input class="dropdown__input text__input" type="text">
+
+                        {% for coll in colls %}
+                                
+                            {% if loop.first %}
+
+                                <ul class="dropdown__list">
+                                
+                            {% endif %}
+
+                                <li class="dropdown__item">
+                                    <p class="dropdown__name">{{coll}}</p>
+                                </li>
+
+                            {% if loop.last %}
+
+                                </ul>
+                                
+                            {% endif %}
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+                <div class="filter__type filter__dropdown filter">
+                    <p class="filter__title">type</p>
+
+                    <div class="dropdown__content">
+
+                        <input class="dropdown__input text__input" type="text">
+
+                            {% for type in types %}
+                                    
+                                {% if loop.first %}
+
+                                    <ul class="dropdown__list">
+                                    
+                                {% endif %}
+
+                                    <li class="dropdown__item">
+                                        <p class="dropdown__name">{{type.name}}</p>
+                                        <p class="dropdown__quantity">{{type.quantity}}</p>
+                                    </li>
+
+                                {% if loop.last %}
+
+                                    </ul>
+                                    
+                                {% endif %}
+
+                            {% endfor %}
+
+                    </div>
+
+                </div>
+
+                <div class="filter__price filter__number filter">
+                    <p class="filter__title">price</p>
+                    
+                        <ul class="number__list">
+                            <li>
+                                <input class="text__input number__input" type="number" min="0" max="999.99" step="0.1" />
+                                <span class="number__currency">$</span>
+                            </li>
+                            <li class="number__item">
+                                <p class="number__to">to</p>
+                            </li>
+                            <li class="number__item">
+                                <input class="text__input number__input" type="number" min="0" max="999.99" step="0.1" />
+                                <span class="number__currency">$</span>
+                            </li>
+                        </ul>
+                </div>
+            
+                <button class="filters__button">FILTER</button>
+
+                
+            </div>
+
+        </form>
+
+
+    </div>
 
 {% endblock %}
