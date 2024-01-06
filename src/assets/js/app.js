@@ -28,12 +28,13 @@ function OnCloseNav(e){
 =DROPDOWN
 =============================== */
 
-const dropdownitemsEl = document.querySelectorAll(".dropdown__item")
+const dropdownitemsCheckBoxEl = document.querySelectorAll(".dropdownItem__checkbox")
+const dropdownListEl = document.querySelectorAll(".dropdown__list")
 var dropdownCrossEl = document.querySelectorAll(".selected__img")
 const templateSelectedEl = document.querySelector(".template__selected")
 const templateSelectedMoreEl = document.querySelector(".template__selectedMore")
 
-dropdownitemsEl.forEach(el => {
+dropdownitemsCheckBoxEl.forEach(el => {
 
     el.addEventListener("click", OnDropdownItem)
 
@@ -41,12 +42,26 @@ dropdownitemsEl.forEach(el => {
 
 function OnDropdownItem(e) {
 
+    console.log(e.target)
+
+    /*
+
     let el = e.target 
     let elParent = document.querySelector(`.selected__${el.dataset.parent}`)
 
     SpawnSelected(el, elParent)
 
+    */
+
 }
+
+function UpdateDropdownSelected(array, elParent) {
+
+
+
+}
+
+/*
 
 function SpawnSelected(el, elParent) {
 
@@ -95,3 +110,5 @@ function UpdateSelected() {
 
 
 }
+
+*/

@@ -14,7 +14,7 @@ permalink: /shop.html
 
     <div class="s-section">
 
-        <form method="POST">
+        <form method="get">
 
             <div class="filters">
 
@@ -31,7 +31,7 @@ permalink: /shop.html
 
                                 <li class="checkbox__item">
                                     <label class="checkbox__label">
-                                        <input class="checkbox__box" type="checkbox" value="{size}">
+                                        <input class="checkbox__box" type="checkbox" value="{{size}}" name="size">
                                         <span class="checkbox__custom"></span>
                                         {{size}}
                                     </label>
@@ -51,27 +51,37 @@ permalink: /shop.html
 
                     <div class="dropdown__content dropdown__collection">
 
-                        <input class="dropdown__input text__input" type="text">
+                        <ul class="selected__list selected__type">
+                        </ul>
 
-                        {% for coll in colls %}
-                                
-                            {% if loop.first %}
+                        <input class="dropdown__input text__input" type="checkbox" id="collection__checkbox">
+                        <label class="dropdown__label text__input" for="collection__checkbox"></label>
 
-                                <ul class="dropdown__list">
-                                
-                            {% endif %}
+                            {% for coll in colls %}
+                                    
+                                {% if loop.first %}
 
-                                <li class="dropdown__item" data-value={{coll}} data-parent="collection">
-                                    <p class="dropdown__name">{{coll}}</p>
-                                </li>
+                                    <ul class="dropdown__list">
+                                    
+                                {% endif %}
+                                    
+                                        <li class="dropdown__item" data-value={{coll}} data-parent="type">
+                                            <label class="dropdownItem__label">
+                                                <input class="dropdownItem__checkbox" type="checkbox" name="collection" value="{{coll}}">
+                                                <span class="dropdownItem__content">
+                                                    <p class="dropdownItem__name">{{coll}}</p>
+                                                    <p class="dropdownItem__quantity">12</p>
+                                                </span>
+                                            </label>
+                                        </li>
+                                    
+                                {% if loop.last %}
 
-                            {% if loop.last %}
+                                    </ul>
+                                    
+                                {% endif %}
 
-                                </ul>
-                                
-                            {% endif %}
-
-                        {% endfor %}
+                            {% endfor %}
 
                     </div>
 
@@ -85,7 +95,8 @@ permalink: /shop.html
                         <ul class="selected__list selected__type">
                         </ul>
 
-                        <input class="dropdown__input text__input" type="text">
+                        <input class="dropdown__input text__input" type="checkbox" id="type__checkbox">
+                        <label class="dropdown__label text__input" for="type__checkbox"></label>
 
                             {% for type in types %}
                                     
@@ -94,12 +105,17 @@ permalink: /shop.html
                                     <ul class="dropdown__list">
                                     
                                 {% endif %}
-
-                                    <li class="dropdown__item" data-value={{type.name}} data-parent="type">
-                                        <p class="dropdown__name">{{type.name}}</p>
-                                        <p class="dropdown__quantity">{{type.quantity}}</p>
-                                    </li>
-
+                                    
+                                        <li class="dropdown__item" data-value={{type.name}} data-parent="type">
+                                            <label class="dropdownItem__label">
+                                                <input class="dropdownItem__checkbox" type="checkbox" name="type" value="{{type.name}}">
+                                                <span class="dropdownItem__content">
+                                                    <p class="dropdownItem__name">{{type.name}}</p>
+                                                    <p class="dropdownItem__quantity">{{type.quantity}}</p>
+                                                </span>
+                                            </label>
+                                        </li>
+                                    
                                 {% if loop.last %}
 
                                     </ul>
@@ -117,20 +133,20 @@ permalink: /shop.html
                     
                         <ul class="number__list">
                             <li>
-                                <input class="text__input number__input" type="number" min="0" max="999.99" step="0.1" />
+                                <input class="text__input number__input" type="number" min="0" max="999.99" step="0.1" name="minPrice" value="0" />
                                 <span class="number__currency">$</span>
                             </li>
                             <li class="number__item">
                                 <p class="number__to">to</p>
                             </li>
                             <li class="number__item">
-                                <input class="text__input number__input" type="number" min="0" max="999.99" step="0.1" />
+                                <input class="text__input number__input" type="number" min="0" max="999.99" step="0.1" name="maxPrice" value="999" />
                                 <span class="number__currency">$</span>
                             </li>
                         </ul>
                 </div>
             
-                <button class="filters__button">FILTER</button>
+                <button type="submit" class="filters__button">FILTER</button>
 
                 
             </div>
