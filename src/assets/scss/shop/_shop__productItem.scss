@@ -1,0 +1,25 @@
+.product__item{
+    width: 100%;
+    height: auto;
+}
+
+.product__item__image img{
+    width: 157px;
+    height: 157px;
+}
+
+.product__item__details{
+    width: 157px;
+    height: auto;
+
+    padding-inline: 5px;
+    border: solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product__item__details p{
+    font-size: 0.8rem;
+}
