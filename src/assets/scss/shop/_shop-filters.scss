@@ -1,0 +1,546 @@
+/* ==============================
+=FILTERS
+=============================== */
+
+.filters {
+
+    display: none;
+
+    border:1px solid var(--color-grey-100);
+
+    position: relative;
+
+}
+
+@media all and (min-width:750px){
+
+    .filters {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-inline: 60px;
+        padding-block: 24px;
+
+        column-gap: 48px;
+
+    }
+  
+}
+  
+@media all and (min-width: 1024px){
+  
+    .filters {
+  
+        margin-inline: 60px;
+        padding-inline: 60px;
+        padding-block: 24px;
+
+        column-gap: 90px;
+    
+    }
+  
+}
+  
+  @media all and (min-width: 1440px){
+  
+    .filters {
+  
+        margin-inline: 60px;
+        padding-inline: 102px;
+        padding-block: 24px;
+    
+    }
+    
+  
+}
+
+.filters__button {
+
+	display: inline-block;
+
+    position: absolute;
+    bottom: 0;
+    right: 66px;
+    transform: translateY(50%);
+
+	color: var(--color-text-light);
+	font-size: 16px;
+    font-weight: 600;
+
+	background-color: var(--color-background-dark);
+	border-radius: 42px;
+    border: 0px solid #000000;
+
+
+	padding:8px 48px;
+
+	text-decoration: none;
+    cursor: pointer;
+
+}
+
+.filter__title {
+
+    font-weight: 700;
+    font-size: calc(16 / 16 * 1rem);
+
+}
+  
+@media all and (min-width: 1024px){
+  
+    .filter__title {
+  
+        font-size: calc(18 / 16 * 1rem);
+    
+    }
+  
+}
+.filter {
+
+    text-align: start;
+
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+
+    gap: 12px;
+
+    padding-block: 24px;
+
+}
+
+.filter__sizes {
+
+    grid-area: 1 1 2 2;
+
+}
+.filter__price {
+
+    grid-area: 2 2 3 3;
+
+}
+.filter__collection {
+
+    grid-area: 2 2 3 3;
+
+}
+
+/* ==============================
+=TEXT
+=============================== */
+
+.text__input {
+
+    width: calc(54 / 16 * 1rem);
+    height: calc(24 / 16 * 1rem);
+    
+    padding-inline: 9px;
+
+    border: 1px solid var(--color-grey-100);
+    border-radius: 6px;
+
+    font-size: calc(14 / 16 * 1rem);
+
+    box-sizing: border-box;
+
+}
+
+@media all and (min-width: 1024px){
+  
+    .text__input {
+
+        width: calc(66 / 16 * 1rem);
+        height: calc(24 / 16 * 1rem);
+    
+    }
+  
+}
+
+/* ==============================
+=CHECKBOX
+=============================== */
+
+.checkbox__list {
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr );
+
+    gap: calc(24 / 16 * 1rem);
+
+}
+
+@media all and (min-width: 1440px){
+    .checkbox__list {
+
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(10, 1fr );
+
+    }
+}
+
+.checkbox__label {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: calc(6 / 16 * 1rem);
+
+    font-size: calc(16 / 16 * 1rem);
+
+}
+
+.checkbox__custom {
+
+    display: block;
+    width: calc(24 / 16 * 1rem);
+    height: calc(24 / 16 * 1rem);
+
+    background-color: var(--color-white);
+
+    border:1px solid var(--color-grey-100);
+    border-radius: 6px;
+
+    position: relative;
+
+}
+
+.checkbox__custom:hover {
+
+    background-color: var(--color-grey-500);
+
+}
+
+.checkbox__label input:checked ~ .checkbox__custom::before {
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/icon_cross.svg");
+    filter: invert(100%);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    pointer-events: none;
+
+}
+
+
+.checkbox__box {
+
+    display: none;
+
+}
+
+/* ==============================
+=NUMBER
+=============================== */
+
+.number__list {
+    
+    display: flex;
+    flex-direction: row;
+
+    align-items: start;
+    justify-content: start;
+
+    gap: 12px;
+
+}
+
+.number__item {
+
+    align-self: start;
+
+}
+
+.number__currency {
+
+    padding-inline-start: 3px;
+
+}
+
+.number__to {
+
+    font-size: calc(16 / 16 * 1rem);
+    font-weight: 600;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+.number__input::-webkit-outer-spin-button,
+.number__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.number__input {
+  appearance: textfield;
+  text-align: center;
+}
+
+/* ==============================
+=DROPDOWN
+=============================== */
+
+.dropdown__content {
+
+    position: relative;
+    width: 100%;
+
+}
+
+.dropdown__list {
+    
+    position: absolute;
+    z-index: 2;
+
+    transform: translateY(-1px);
+
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 132px;
+
+    overflow-y: scroll;
+
+    display: none;
+ 
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    border: 1px solid var(--color-grey-100);
+    border-radius: 6px;
+
+    background-color: var(--color-white);
+}
+
+.dropdown__list::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown__input {
+
+    display: none;
+
+}
+
+.dropdown__input:checked ~ .dropdown__list {
+
+    display: flex;
+
+}
+
+.dropdown__label {
+
+    width: 100%;
+    display: block;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.dropdown__label:hover {
+
+    cursor: pointer;
+    background-color: var(--color-grey-500);
+
+}
+
+.dropdown__label::before {
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    margin-left: 95%;
+
+    background-image: url("../img/icon_arrow_black.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    transform-origin: center center;
+    transform: rotate(180deg);
+
+    color: var(--color-text-dark);
+
+    transition: all 0.2s ease-in-out;
+
+}
+
+.dropdown__input:checked ~ .dropdown__label::before {
+
+    transform: rotate(0deg);
+
+}
+
+.dropdown__item {
+
+    width: 100%;
+    position: relative;
+
+}
+
+.dropdown__item::after {
+
+    content: "";
+    width: 96%;
+    height: 1px;
+
+    background-color: var(--color-background-dark);
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+
+}
+
+
+.dropdown__item:last-child:after {
+
+    height: 0px;
+
+}
+ 
+.dropdownItem__checkbox {
+
+    display: none;
+
+}
+
+.dropdownItem__content {
+
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-block: 9px;
+    padding-inline: 12px;
+
+}
+
+.dropdownItem__checkbox:checked + .dropdownItem__content {
+
+    background-color: var(--color-green-400);
+    color: var(--color-text-light);
+
+}
+
+
+.dropdownItem__content:hover {
+
+    background-color: var(--color-green-300);
+    color: var(--color-white);
+
+    cursor: pointer;
+
+}
+
+.dropdownItem__checkbox:checked + .dropdownItem__content:hover {
+
+    background-color: var(--color-green-300);
+
+}
+
+.dropdownItem__name {
+
+    font-size: 14px;
+    pointer-events: none;
+
+}
+
+.dropdownItem__quantity {
+
+    font-size: 10px;
+    pointer-events: none;
+
+}
+
+  
+@media all and (min-width: 1024px){
+  
+    .dropdownItem__name {
+
+        font-size: 16px;
+    
+    }
+    
+    .dropdownItem__quantity {
+    
+        font-size: 12px;
+    
+    }
+  
+}
+
+/* ==============================
+=SLECTED
+=============================== */
+
+.selected__list {
+
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    right: 6px;
+    top: 3px;
+
+}
+
+.selected__content {
+
+    height: 18px;
+    
+    background-color: var(--color-green-300);
+    border-radius: 6px;
+
+    padding: 0 0 0 8px;
+
+    color: var(--color-text-light);
+    font-size: 12px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+ }
+
+ .selected__text {
+
+    display: inline;
+    padding-inline-end: 8px;
+
+ }
+
+ .selected__img {
+
+    display: inline;
+    width: 8px;
+
+    padding: 2px;
+    margin-inline-end: 4px;
+
+    background-color: var(--color-white);
+    border-radius: 12px;
+
+
+ }
+
+ .selected__img:hover {
+
+    cursor: pointer;
+
+ }

@@ -1,8 +1,42 @@
 .s-section {
 
-  margin-block-start: 2rem;
+  margin-block: 60px;
+  margin-inline: 18px;
 
 }
+
+@media all and (min-width:750px){
+
+  .s-section {
+
+    margin-block: 102px;
+    margin-inline: 30px;
+  
+  }
+
+}
+
+@media all and (min-width: 1024px){
+
+  .s-section {
+
+    margin-inline: 60px;
+  
+  }
+
+}
+
+@media all and (min-width: 1440px){
+
+  .s-section {
+
+    margin-inline: 120px;
+  
+  }
+  
+
+}
+
 
 
 .s-section__dark {
