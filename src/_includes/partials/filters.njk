@@ -77,6 +77,16 @@
             <div class="dropdown__content">
 
                 <ul class="selected__list selected__type">
+                    <li class="selected__item">
+                        <span>
+                            <label class="test" for="T-shirt">
+                                <span class="selected__content">
+                                    <p class="selected__text">T-shirt</p>
+                                    <img class="selected__img" src="assets/img/icon_cross_green.svg" alt="">
+                                </span>
+                            </label>
+                        </span>
+                    </li>
                 </ul>
 
                 <input class="dropdown__input text__input" type="checkbox" id="type__checkbox">
@@ -92,7 +102,7 @@
                             
                                 <li class="dropdown__item" data-value={{type.name}} data-parent="type">
                                     <label class="dropdownItem__label">
-                                        <input class="dropdownItem__checkbox" type="checkbox" name="type" value="{{type.name}}">
+                                        <input class="dropdownItem__checkbox" type="checkbox" name="type" value="{{type.name}}"" id="T-shirt">
                                         <span class="dropdownItem__content">
                                             <p class="dropdownItem__name">{{type.name}}</p>
                                             <p class="dropdownItem__quantity">{{type.quantity}}</p>
@@ -136,6 +146,7 @@
     </div>
 
 </form>
+
 
 <template class="template__selected">
     <li class="selected__item">
