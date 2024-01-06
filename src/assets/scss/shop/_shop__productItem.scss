@@ -1,6 +1,29 @@
+.smallMateStar::before{
+    content: "";
+    display: block;
+    height: clamp(64px, 10vw, 117px);
+  
+    background-image: url("../img/MateSymbolHorIta.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+  
+    transform: translateY(50%);
+  
+    pointer-events: none;
+  }
+
 .product__item{
-    width: 100%;
+    min-width: 157px;
     height: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.product__item__image{
+    min-height: 157px;
+    margin-bottom: 6px;
 }
 
 .product__item__image img{
@@ -12,8 +35,10 @@
     width: 157px;
     height: auto;
 
-    padding-inline: 5px;
-    border: solid;
+    box-sizing: border-box;
+    padding:3px 5px;
+    border: 1px solid var(--color-text);
+    border-radius: 6px;
 
     display: flex;
     flex-direction: row;
@@ -22,4 +47,57 @@
 
 .product__item__details p{
     font-size: 0.8rem;
+    font-weight: normal;
+}
+
+@media all and (min-width:750px){
+    
+    .product__item{
+        width: 303px;
+    }
+
+    .product__item__image{
+        height: 303px;
+        margin-bottom: 16px;
+    }
+
+    .product__item__image img{
+        width: 303px;
+        height: 303px;
+    }
+
+    .product__item__details{
+        width: 303px;
+        padding:6px 8px;
+    }
+
+    .product__item__details p{
+        font-size: 0.9rem;
+    }
+}
+
+@media all and (min-width:1024px){
+    
+    .product__item{
+        width: 350px;
+    }
+
+    .product__item__image{
+        height: 350px;
+        margin-bottom: 18px;
+    }
+
+    .product__item__image img{
+        width: 350px;
+        height: 350px;
+    }
+
+    .product__item__details{
+        width: 350px;
+        padding:5px 9px;
+    }
+
+    .product__item__details p{
+        font-size: 1.1rem;
+    }
 }
