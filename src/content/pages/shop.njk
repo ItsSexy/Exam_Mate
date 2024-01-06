@@ -1,7 +1,7 @@
 ---
 permalink: /shop.html
 ---
-
+{% set myProducts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11, 12, 13, 14, 15] %}
 {% set sizes = ["XS", "S", "M", "L", "XL", "XXL"] %}
 {% set colls = ["Asmterdam '99", "Knokke '89", "Ardennes '20"] %}
 {% set types = [{ name : 'T-shirt', quantity : 12}, { name : 'Hoodie', quantity : 12}, { name : 'Short', quantity : 12}, { name : 'Beanie', quantity : 12}, { name : 'Cap', quantity : 12}, { name : 'Throusers', quantity : 12}, { name : 'Patchs', quantity : 12}] %}
@@ -23,7 +23,15 @@ permalink: /shop.html
         <div class="products">
 
             <ul class="products__list">
-                <li class></li>
+
+                {% for i in myProducts %}
+                    
+                    <li class="product__item">
+                        <img class="fluidimg" src="assets/img/Card.png" alt="">
+                    </li>
+
+                {% endfor %}
+
             </ul>
 
         </div>
