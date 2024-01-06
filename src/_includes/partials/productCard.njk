@@ -1,5 +1,12 @@
-<li class="product__item  smallMateStar"> 
+<li class="product__item  smallMateStar slideUp slideRight"> 
     <div class="product__item__image"> 
+        <div class="product__item__colorDiv">
+            {% for i in myColors %}
+                    
+                {% include "partials/productCardColors.njk" %}
+
+            {% endfor %}
+        </div>
         <img class="o-fluidimg" src="assets/img/tshirtExample2.png" alt="product image">
     </div>
     <div class="product__item__details">
