@@ -20,7 +20,7 @@ function OnOpenNav(e){
 function OnCloseNav(e){
 
     hiddenNavEl.style.left = "100%";
-    bodyEl.style.overflow = "scroll";
+    bodyEl.style.overflowY = "scroll";
 
 }
 

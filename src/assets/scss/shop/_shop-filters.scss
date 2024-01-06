@@ -433,7 +433,7 @@
 
 .dropdownItem__checkbox:checked + .dropdownItem__content {
 
-    background-color: var(--color-green-300);
+    background-color: var(--color-green-400);
     color: var(--color-text-light);
 
 }
@@ -441,10 +441,16 @@
 
 .dropdownItem__content:hover {
 
-    background-color: var(--color-green-400);
+    background-color: var(--color-green-300);
     color: var(--color-white);
 
     cursor: pointer;
+
+}
+
+.dropdownItem__checkbox:checked + .dropdownItem__content:hover {
+
+    background-color: var(--color-green-300);
 
 }
 
