@@ -25,6 +25,31 @@ function OnCloseNav(e){
 }
 
 /* ==============================
+MOBILE Filters
+=============================== */
+
+const filtersEl = document.querySelector(".filters");
+const filtersButtonOpenEl = document.querySelector(".button__filters");
+const filtersButtonCloseEl = document.querySelector(".filters__nav__close");
+
+filtersButtonOpenEl.addEventListener("click", OnOpenFilters)
+filtersButtonCloseEl.addEventListener("click", OnCloseFilters)
+
+function OnOpenFilters(e){
+
+    filtersEl.style.left = "0%";
+    bodyEl.style.overflow = "hidden";
+
+}
+
+function OnCloseFilters(e){
+
+    filtersEl.style.left = "-100%";
+    bodyEl.style.overflowY = "scroll";
+
+}
+
+/* ==============================
 =DROPDOWN
 =============================== */
 

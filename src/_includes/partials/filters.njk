@@ -1,12 +1,29 @@
 <form method="get" class="filters__form">
 
+    <div class="button__filters">
+        <img src="assets/img/icon_filter.svg" alt="">
+    </div>
+
     {% include "partials/searchBar.njk" %}
 
     <div class="filters">
 
-        <div class="filter__sizes filter__checkbox filter">
-            <p class="filter__title">sizes</p>
+        <div class="filters__nav">
+            <ul class="filters__nav__list">
+                <li class="filters__nav__item filters__nav__close"><img src="assets/img/icon_cross_black.svg" alt=""></li>
+                <li class="filters__nav__item filters__nav__title">Filter</li>
+                <li class="filters__nav__item">restet</li>
+            </ul>
+        </div>
 
+        <div class="filter__sizes filter__checkbox filter">
+
+            <input class="filter__input" type="checkbox" id="size__checkbox">
+            <label class="filter__label" for="size__checkbox">
+                <p class="filter__title">sizes</p>
+            </label>
+
+            <div class="filter__content">
                 {% for size in sizes %}
                     
                     {% if loop.first %}
@@ -30,104 +47,128 @@
                     {% endif %}
 
                 {% endfor %}
+            </div>
+
+            
+
         </div>
 
         <div class="filter__collection filter__dropdown filter">
-            <p class="filter__title">collection</p>
 
-            <div class="dropdown__content dropdown__collection">
+            <input class="filter__input" type="checkbox" id="collection">
+            <label class="filter__label" for="collection">
+                <p class="filter__title">collection</p>
+            </label>
 
-                <ul class="selected__list selected__type">
-                </ul>
+            <div class="filter__content">
 
-                <input class="dropdown__input text__input" type="checkbox" id="collection__checkbox">
-                <label class="dropdown__label text__input" for="collection__checkbox"></label>
+                <div class="dropdown__content dropdown__collection">
 
-                    {% for coll in colls %}
-                            
-                        {% if loop.first %}
+                    <ul class="selected__list selected__type">
+                    </ul>
 
-                            <ul class="dropdown__list">
-                            
-                        {% endif %}
-                            
-                                <li class="dropdown__item" data-value={{coll}} data-parent="type">
-                                    <label class="dropdownItem__label">
-                                        <input class="dropdownItem__checkbox" type="checkbox" name="collection" value="{{coll}}">
-                                        <span class="dropdownItem__content">
-                                            <p class="dropdownItem__name">{{coll}}</p>
-                                            <p class="dropdownItem__quantity">12</p>
-                                        </span>
-                                    </label>
-                                </li>
-                            
-                        {% if loop.last %}
+                    <input class="dropdown__input text__input" type="checkbox" id="collection__checkbox">
+                    <label class="dropdown__label text__input" for="collection__checkbox"></label>
 
-                            </ul>
-                            
-                        {% endif %}
+                        {% for coll in colls %}
+                                
+                            {% if loop.first %}
 
-                    {% endfor %}
+                                <ul class="dropdown__list">
+                                
+                            {% endif %}
+                                
+                                    <li class="dropdown__item" data-value={{coll}} data-parent="type">
+                                        <label class="dropdownItem__label">
+                                            <input class="dropdownItem__checkbox" type="checkbox" name="collection" value="{{coll}}">
+                                            <span class="dropdownItem__content">
+                                                <p class="dropdownItem__name">{{coll}}</p>
+                                                <p class="dropdownItem__quantity">12</p>
+                                            </span>
+                                        </label>
+                                    </li>
+                                
+                            {% if loop.last %}
 
+                                </ul>
+                                
+                            {% endif %}
+
+                        {% endfor %}
+
+                </div>
             </div>
 
         </div>
 
         <div class="filter__type filter__dropdown filter">
-            <p class="filter__title">type</p>
 
-            <div class="dropdown__content">
+            <input class="filter__input" type="checkbox" id="type">
+            <label class="filter__label" for="type">
+                <p class="filter__title">type</p>
+            </label>
 
-                <!--
-                <ul class="selected__list selected__type">
-                    <li class="selected__item">
-                        <span>
-                            <label class="test" for="T-shirt">
-                                <span class="selected__content">
-                                    <p class="selected__text">T-shirt</p>
-                                    <img class="selected__img" src="assets/img/icon_cross_green.svg" alt="">
-                                </span>
-                            </label>
-                        </span>
-                    </li>
-                </ul>
-                -->
+            <div class="filter__content">
 
-                <input class="dropdown__input text__input" type="checkbox" id="type__checkbox">
-                <label class="dropdown__label text__input" for="type__checkbox"></label>
+                <div class="dropdown__content">
 
-                    {% for type in types %}
-                            
-                        {% if loop.first %}
+                    <!--
+                    <ul class="selected__list selected__type">
+                        <li class="selected__item">
+                            <span>
+                                <label class="test" for="T-shirt">
+                                    <span class="selected__content">
+                                        <p class="selected__text">T-shirt</p>
+                                        <img class="selected__img" src="assets/img/icon_cross_green.svg" alt="">
+                                    </span>
+                                </label>
+                            </span>
+                        </li>
+                    </ul>
+                    -->
 
-                            <ul class="dropdown__list">
-                            
-                        {% endif %}
-                            
-                                <li class="dropdown__item" data-value={{type.name}} data-parent="type">
-                                    <label class="dropdownItem__label">
-                                        <input class="dropdownItem__checkbox" type="checkbox" name="type" value="{{type.name}}" id="T-shirt">
-                                        <span class="dropdownItem__content">
-                                            <p class="dropdownItem__name">{{type.name}}</p>
-                                            <p class="dropdownItem__quantity">{{type.quantity}}</p>
-                                        </span>
-                                    </label>
-                                </li>
-                            
-                        {% if loop.last %}
+                    <input class="dropdown__input text__input" type="checkbox" id="type__checkbox">
+                    <label class="dropdown__label text__input" for="type__checkbox"></label>
 
-                            </ul>
-                            
-                        {% endif %}
+                        {% for type in types %}
+                                
+                            {% if loop.first %}
 
-                    {% endfor %}
+                                <ul class="dropdown__list">
+                                
+                            {% endif %}
+                                
+                                    <li class="dropdown__item" data-value={{type.name}} data-parent="type">
+                                        <label class="dropdownItem__label">
+                                            <input class="dropdownItem__checkbox" type="checkbox" name="type" value="{{type.name}}" id="T-shirt">
+                                            <span class="dropdownItem__content">
+                                                <p class="dropdownItem__name">{{type.name}}</p>
+                                                <p class="dropdownItem__quantity">{{type.quantity}}</p>
+                                            </span>
+                                        </label>
+                                    </li>
+                                
+                            {% if loop.last %}
+
+                                </ul>
+                                
+                            {% endif %}
+
+                        {% endfor %}
+
+                </div>
 
             </div>
 
         </div>
 
         <div class="filter__price filter__number filter">
-            <p class="filter__title">price</p>
+            <input class="filter__input" type="checkbox" id="price">
+            <label class="filter__label" for="price">
+                <p class="filter__title">price</p>
+            </label>
+
+            <div class="filter__content">
             
                 <ul class="number__list">
                     <li>
@@ -142,6 +183,7 @@
                         <span class="number__currency">$</span>
                     </li>
                 </ul>
+            </div>
         </div>
     
         <button type="submit" class="filters__button">FILTER</button>
