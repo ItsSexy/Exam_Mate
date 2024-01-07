@@ -1,16 +1,20 @@
-<li class="product__item  smallMateStar slideUp slideRight"> 
+    {% if p.new %}
+    <li class="product__item smallMateStar slideUp slideRight"> 
+    {% else %}
+    <li class="product__item slideUp slideRight">   
+    {% endif %}
     <div class="product__item__image"> 
         <div class="product__item__colorDiv">
-            {% for i in myColors %}
+            {% for color in p.colors %}
                     
                 {% include "partials/productCardColors.njk" %}
 
             {% endfor %}
         </div>
-        <img class="o-fluidimg" src="assets/img/tshirtExample2.png" alt="product image">
+        <img class="o-fluidimg" src='assets/img/{{p.img["front-main"]}}' alt="product image">
     </div>
     <div class="product__item__details">
-        <p class="product__item__name"> T-shirt </p>
-        <p class="product__item__price"> $69.99 </p>
+        <p class="product__item__name"> {{p.name}} </p>
+        <p class="product__item__price"> {{p.price}} </p>
     </div>
 </li>
