@@ -1,0 +1,40 @@
+.banner{
+    height: 300px;
+    width: 100%;
+
+    background-image: url("../img/ardennesBigBanner.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__collection{
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--color-white);  
+    line-height: 1.375rem;
+}
+
+.banner__product{
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: var(--color-white);
+    line-height: 2.75rem;
+}
+
+@media all and (min-width:1024px){
+    .banner__collection{
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+    
+    .banner__product{
+        font-size: 4rem;
+        line-height: 4.875rem;
+    }
+}
