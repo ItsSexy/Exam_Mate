@@ -22,7 +22,6 @@ input[type="search"]::-webkit-search-results-decoration {
     .searchbar {
 
         width: 263px;
-        font-size: calc(16 / 16 * 1rem);
 
     }
   
@@ -47,6 +46,16 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: calc(12 / 16 * 1rem);
 
     background-color: var(--color-white);
+}
+
+@media all and (min-width:750px){
+
+    .searchbar__input {
+
+        font-size: calc(16 / 16 * 1rem);
+
+    }
+  
 }
 
 .searchbar__reset {

@@ -25,8 +25,8 @@ permalink: /shop.html
 
             <ul class="products__list">
 
-                {% for i in myProducts %}
-                    
+                {% for p in dailyProducts.products %}
+
                     {% include "partials/productCard.njk" %}
 
                 {% endfor %}

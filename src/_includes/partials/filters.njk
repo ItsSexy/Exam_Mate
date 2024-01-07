@@ -78,6 +78,7 @@
 
             <div class="dropdown__content">
 
+                <!--
                 <ul class="selected__list selected__type">
                     <li class="selected__item">
                         <span>
@@ -90,6 +91,7 @@
                         </span>
                     </li>
                 </ul>
+                -->
 
                 <input class="dropdown__input text__input" type="checkbox" id="type__checkbox">
                 <label class="dropdown__label text__input" for="type__checkbox"></label>
@@ -104,7 +106,7 @@
                             
                                 <li class="dropdown__item" data-value={{type.name}} data-parent="type">
                                     <label class="dropdownItem__label">
-                                        <input class="dropdownItem__checkbox" type="checkbox" name="type" value="{{type.name}}"" id="T-shirt">
+                                        <input class="dropdownItem__checkbox" type="checkbox" name="type" value="{{type.name}}" id="T-shirt">
                                         <span class="dropdownItem__content">
                                             <p class="dropdownItem__name">{{type.name}}</p>
                                             <p class="dropdownItem__quantity">{{type.quantity}}</p>

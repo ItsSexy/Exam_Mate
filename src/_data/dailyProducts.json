@@ -1,0 +1,95 @@
+{
+    "products":
+    [
+        {
+            "name": "T-shirt",
+            "colors": ["#00ff00","#1250c4"],
+            "price": 69.99,
+            "img": {
+                "front-main": "tshirtExample2.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": true,
+            "promo": 0
+
+        },
+        {
+            "name": "Hoodie",
+            "colors": ["#00ff00","#1250c4"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample2.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+        ,
+        {
+            "name": "Hoodie",
+            "colors": ["#00ff00","#1250c4"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample2.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+        ,
+        {
+            "name": "Hoodie",
+            "colors": ["#00ff00","#1250c4"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample2.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+        ,
+        {
+            "name": "Hoodie",
+            "colors": ["#00ff00","#1250c4"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample2.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        },
+        {
+            "name": "Hoodie",
+            "colors": ["#00ff00","#1250c4"],
+            "price": 89.99,
+            "img": {
+                "front-main": "tshirtExample2.png",
+                "front-zoom": "",
+                "global": "",
+                "back": ""
+            },
+            "new": false,
+            "promo": 0
+
+        }
+
+
+    ]
+
+}
