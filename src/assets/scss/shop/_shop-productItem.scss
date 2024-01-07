@@ -67,12 +67,20 @@
 
 @media all and (min-width:750px){
 
+    .product__item__image{
+        margin-bottom: 12px;
+    }
+
     .product__item__details p{
         font-size: 0.9rem;
     }
 }
 
 @media all and (min-width:1024px){
+
+    .product__item__image{
+        margin-bottom: 18px;
+    }
 
     .product__item__details p{
         font-size: 1.1rem;
