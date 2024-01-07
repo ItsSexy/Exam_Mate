@@ -2,6 +2,37 @@
 =FILTERS
 =============================== */
 
+.filters__form {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+@media all and (min-width: 1024px){
+  
+    .filters__form {
+  
+        margin-inline: 60px;
+        gap: 24px;
+    
+    }
+  
+}
+  
+  @media all and (min-width: 1440px){
+  
+    .filters__form {
+  
+        margin-inline: 60px;
+    
+    }
+    
+  
+}
+
 .filters {
 
     display: none;
@@ -31,8 +62,7 @@
 @media all and (min-width: 1024px){
   
     .filters {
-  
-        margin-inline: 60px;
+
         padding-inline: 60px;
         padding-block: 24px;
 
@@ -46,7 +76,6 @@
   
     .filters {
   
-        margin-inline: 60px;
         padding-inline: 102px;
         padding-block: 24px;
     
@@ -144,6 +173,8 @@
     font-size: calc(14 / 16 * 1rem);
 
     box-sizing: border-box;
+
+    background-color: var(--color-white);
 
 }
 
