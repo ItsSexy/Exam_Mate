@@ -77,6 +77,9 @@ MOBILE NAV
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
 
+  box-sizing: border-box;
+  width: 100%;
+
   height: calc(60 / 16 * 1rem);
   padding-inline: 36px;
 
@@ -104,6 +107,8 @@ MOBILE NAV
   height: 100vh;
   width: 100%;
 
+  box-sizing: border-box;
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: calc(60 / 16 * 1rem) 1fr;
@@ -125,6 +130,9 @@ MOBILE NAV
   display: flex;
   flex-direction: row;
 
+  box-sizing: border-box;
+  
+  width: 100%;
   height: 100%;
   padding-inline: 36px;
 
@@ -143,11 +151,31 @@ MOBILE NAV
   align-content: center;
   justify-content: space-between;
 
+  position: relative;
+
 }
 
-.hidden__item {
+.hidden__item  { 
+
+
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.hidden__item > a {
 
   --font-size : calc(24 / 16 * 1rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   font-size: var(--font-size);
   font-weight: 600;
@@ -155,10 +183,7 @@ MOBILE NAV
   height: 100%;
   width: 100%;
 
-  display: flex;
-  align-items: center;
   text-align: center;
-  justify-content: center;
 
   transition: all 0.3s ease-in-out;
 }

@@ -707,13 +707,6 @@
 
 }
 
-.dropdown__item {
-
-    border: solid 1px var(--color-border);
-    border-radius: 6px;
-
-}
-
 @media all and (min-width: 750px){
 
     .dropdown__item {
@@ -755,6 +748,9 @@
 
     padding-block: 6px;
     padding-inline: 9px;
+
+    border: solid 1px var(--color-border);
+    border-radius: 6px;
 
 }
 
