@@ -1,0 +1,154 @@
+---
+permalink: /product.html
+---
+{% set sizes = ["XS", "S", "M", "L", "XL", "XXL"] %}
+{% set colors = ["#09835E", "#FFFDF8", "#443D45", "#E7A600"] %}
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+{% include "partials/banner.njk" %}
+
+    <div class="s-section path">
+        <div class="product__path">
+            <p>shop/ardennes/basic t-shirt</p>
+        </div>
+
+        <div class="product__grid">
+            <div class="product__images">
+                <div class="product__extraImages">
+                    <img src="assets/img/tshirtExample2.png" alt="currentImage" class="o-fluidimg">
+                    <img src="assets/img/tshirtExample2.png" alt="currentImage" class="o-fluidimg">
+                    <img src="assets/img/tshirtExample2.png" alt="currentImage" class="o-fluidimg">
+                </div>
+                <div class="product__currentImage">
+                    <img src="assets/img/tshirtExample2.png" alt="currentImage" class="o-fluidimg">
+                </div>
+            </div>
+            <div class="product__details">
+                <div class="product__name">
+                    <p class="title">Basic T-shirt | </p>
+                    <div class="product__collection">
+                        <a href="">Ardennes '20</a>
+                    </div>
+                </div>
+                <div class="sizeRadio">
+                        {% for size in sizes %}
+                            
+                            {% if loop.first %}
+        
+                                <ul class="sizeRadio__list">
+                                
+                            {% endif %}
+        
+                                <li>
+                                    <label class="sizeRadio__label">
+                                        <input class="sizeRadio__box" type="radio" value="{{size}}" name="size">
+                                        <span class="sizeRadio__custom">{{size}}</span>
+                                    </label>
+                                </li>
+        
+                            {% if loop.last %}
+        
+                                </ul>
+                                
+                            {% endif %}
+        
+                        {% endfor %}
+                </div>
+                <div class="colorRadio">
+                    {% for color in colors %}
+                            
+                    {% if loop.first %}
+
+                        <ul class="colorRadio__list">
+                        
+                    {% endif %}
+
+                        <li>
+                            <label class="colorRadio__label">
+                                <input class="colorRadio__box" type="radio" value="{{color}}" name="color">
+                                <span class="colorRadio__custom" style="background-color:{{color}};"></span>
+                            </label>
+                        </li>
+
+                    {% if loop.last %}
+
+                        </ul>
+                        
+                    {% endif %}
+
+                {% endfor %}
+                </div>
+
+                <div class="numberInput">
+                    <div class="numberInput__incr">
+                        <a>-</a>
+                        <div>
+                            <p>1</p>
+                        </div>
+                        <a>+</a>
+                    </div>
+                    <p class="product__stock">10 left</p>
+                </div>
+
+                <div class="amountLine"></div>
+
+                <div class="product__prices">
+                    <p class="product__basicPrice">$69.99</p>
+                    <p class="product__shipPrice">+ 9.99$ shipping</p>
+                </div>
+
+                <div class="product__cartButton">
+                    <p>add to cart</p>
+                </div>
+
+                <div class="product__description">
+                    <p>100% Organic Cotton 240g/m2. Lose fit. Pre-washed. Our garments are preferred to be washed with Dash. It features a large print on the front designed by the artist Mate.</p>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="s-section">
+            <p class="title">Similar Products</p>
+            <div class="simproducts__section">
+                <div class="simproducts">
+                    <div class="simproducts__item">
+                        <div class="simproducts__image">
+                            <img src="assets/img/tshirtExample2.png" alt="simprod" class="o-fluidimg">
+                        </div>
+                        <div class="simproducts__detail">
+                            <p class="simproducts__name">Basic T-shirt</p>
+                            <p class="simproducts__price">$69.99</p>
+                        </div>
+                    </div>
+                    <div class="simproducts__item">
+                        <div class="simproducts__image">
+                            <img src="assets/img/tshirtExample2.png" alt="simprod" class="o-fluidimg">
+                        </div>
+                        <div class="simproducts__detail">
+                            <p class="simproducts__name">Basic T-shirt</p>
+                            <p class="simproducts__price">$69.99</p>
+                        </div>
+                    </div>
+                    <div class="simproducts__item">
+                        <div class="simproducts__image">
+                            <img src="assets/img/tshirtExample2.png" alt="simprod" class="o-fluidimg">
+                        </div>
+                        <div class="simproducts__detail">
+                            <p class="simproducts__name">Basic T-shirt</p>
+                            <p class="simproducts__price">$69.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="simproducts__button">
+                    <p>show more</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
