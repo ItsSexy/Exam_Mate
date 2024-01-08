@@ -5,18 +5,30 @@
 
 }
 
+.path{
+  margin-block-start: 12px;
+}
+
 @media all and (min-width:750px){
 
   .s-section {
-
+    
     margin-block: 102px;
     margin-inline: 30px;
+    
+  }
   
+  .path{
+    margin-block: 18px 60px;
   }
 
 }
 
 @media all and (min-width: 1024px){
+
+  .path{
+    margin-block-start: 60px;
+  }
 
   .s-section {
 

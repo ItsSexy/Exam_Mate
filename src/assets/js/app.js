@@ -2,26 +2,22 @@
 MOBILE NAV
 =============================== */
 
-const bodyEl = document.body
+const bodyEl = document.body;
 const hiddenNavEl = document.querySelector(".mobilenav__hidden");
 const openNavButtonEl = document.querySelector(".mobilenav__open");
 const closeNavButtonEl = document.querySelector(".mobilenav__close");
 
-openNavButtonEl.addEventListener("click", OnOpenNav)
-closeNavButtonEl.addEventListener("click", OnCloseNav)
+openNavButtonEl.addEventListener("click", OnOpenNav);
+closeNavButtonEl.addEventListener("click", OnCloseNav);
 
-function OnOpenNav(e){
-
-    hiddenNavEl.style.left = "0%";
-    bodyEl.style.overflow = "hidden";
-
+function OnOpenNav(e) {
+  hiddenNavEl.style.left = "0%";
+  bodyEl.style.overflow = "hidden";
 }
 
-function OnCloseNav(e){
-
-    hiddenNavEl.style.left = "100%";
-    bodyEl.style.overflowY = "scroll";
-
+function OnCloseNav(e) {
+  hiddenNavEl.style.left = "100%";
+  bodyEl.style.overflowY = "scroll";
 }
 
 /* ==============================
@@ -32,44 +28,53 @@ const filtersEl = document.querySelector(".filters");
 const filtersButtonOpenEl = document.querySelector(".button__filters");
 const filtersButtonCloseEl = document.querySelector(".filters__nav__close");
 
-filtersButtonOpenEl.addEventListener("click", OnOpenFilters)
-filtersButtonCloseEl.addEventListener("click", OnCloseFilters)
+filtersButtonOpenEl.addEventListener("click", OnOpenFilters);
+filtersButtonCloseEl.addEventListener("click", OnCloseFilters);
 
-function OnOpenFilters(e){
-
-    filtersEl.style.left = "0%";
-    bodyEl.style.overflow = "hidden";
-
+function OnOpenFilters(e) {
+  filtersEl.classList.toggle("filters__visible");
+  filtersEl.classList.toggle("filters__hidden");
+  bodyEl.style.overflow = "hidden";
 }
 
-function OnCloseFilters(e){
+function OnCloseFilters(e) {
+  filtersEl.classList.toggle("filters__visible");
+  filtersEl.classList.toggle("filters__hidden");
+  bodyEl.style.overflowY = "scroll";
+}
 
-    filtersEl.style.left = "-100%";
-    bodyEl.style.overflowY = "scroll";
+window.addEventListener("resize", StartMobile);
 
+StartMobile();
+function StartMobile() {
+  if (window.innerWidth < 750) {
+    filtersEl.classList.add("filters__mobile");
+    filtersEl.classList.add("filters__hidden");
+  }
 }
 
 /* ==============================
 =DROPDOWN
 =============================== */
 
-const dropdownitemsCheckBoxEl = document.querySelectorAll(".dropdownItem__checkbox")
-const dropdownListEl = document.querySelectorAll(".dropdown__list")
-var dropdownCrossEl = document.querySelectorAll(".selected__img")
-const templateSelectedEl = document.querySelector(".template__selected")
-const templateSelectedMoreEl = document.querySelector(".template__selectedMore")
+const dropdownitemsCheckBoxEl = document.querySelectorAll(
+  ".dropdownItem__checkbox"
+);
+const dropdownListEl = document.querySelectorAll(".dropdown__list");
+var dropdownCrossEl = document.querySelectorAll(".selected__img");
+const templateSelectedEl = document.querySelector(".template__selected");
+const templateSelectedMoreEl = document.querySelector(
+  ".template__selectedMore"
+);
 
-dropdownitemsCheckBoxEl.forEach(el => {
-
-    el.addEventListener("click", OnDropdownItem)
-
+dropdownitemsCheckBoxEl.forEach((el) => {
+  el.addEventListener("click", OnDropdownItem);
 });
 
 function OnDropdownItem(e) {
+  console.log(e.target);
 
-    console.log(e.target)
-
-    /*
+  /*
 
     let el = e.target 
     let elParent = document.querySelector(`.selected__${el.dataset.parent}`)
@@ -77,14 +82,9 @@ function OnDropdownItem(e) {
     SpawnSelected(el, elParent)
 
     */
-
 }
 
-function UpdateDropdownSelected(array, elParent) {
-
-
-
-}
+function UpdateDropdownSelected(array, elParent) {}
 
 /*
 

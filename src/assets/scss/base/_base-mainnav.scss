@@ -104,9 +104,8 @@ MOBILE NAV
   background-color: var(--color-background-dark);
   color: var(--color-text-light);
 
-  height: 100vh;
   width: 100%;
-
+  height: 100%;
   box-sizing: border-box;
 
   display: grid;
@@ -117,8 +116,6 @@ MOBILE NAV
   top: 0;
   left: 100%;
   transition: all 0.5s ease-in-out;
-
-
 
   z-index: 9999;
 }
