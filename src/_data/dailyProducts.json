@@ -3,7 +3,7 @@
     [
         {
             "name": "T-shirt",
-            "colors": ["#00ff00","#1250c4"],
+            "colors": ["#09835E","#443D45"],
             "price": 69.99,
             "img": {
                 "front-main": "tshirtExample2.png",
@@ -16,11 +16,11 @@
 
         },
         {
-            "name": "Hoodie",
-            "colors": ["#00ff00","#1250c4"],
+            "name": "Wool Sweater",
+            "colors": ["#09835E","#FFFDF8"],
             "price": 89.99,
             "img": {
-                "front-main": "tshirtExample2.png",
+                "front-main": "tshirtExample3.png",
                 "front-zoom": "",
                 "global": "",
                 "back": ""
@@ -31,11 +31,11 @@
         }
         ,
         {
-            "name": "Hoodie",
-            "colors": ["#00ff00","#1250c4"],
+            "name": "Ski Vest",
+            "colors": ["#D72E56","#FFFDF8"],
             "price": 89.99,
             "img": {
-                "front-main": "tshirtExample2.png",
+                "front-main": "tshirtExample4.png",
                 "front-zoom": "",
                 "global": "",
                 "back": ""
@@ -46,11 +46,11 @@
         }
         ,
         {
-            "name": "Hoodie",
-            "colors": ["#00ff00","#1250c4"],
+            "name": "Puffer Jacket",
+            "colors": ["#672D81","#443D45"],
             "price": 89.99,
             "img": {
-                "front-main": "tshirtExample2.png",
+                "front-main": "tshirtExample5.png",
                 "front-zoom": "",
                 "global": "",
                 "back": ""
@@ -61,11 +61,11 @@
         }
         ,
         {
-            "name": "Hoodie",
-            "colors": ["#00ff00","#1250c4"],
+            "name": "Wool Polo",
+            "colors": ["#355EA0","#FFFDF8"],
             "price": 89.99,
             "img": {
-                "front-main": "tshirtExample2.png",
+                "front-main": "tshirtExample6.png",
                 "front-zoom": "",
                 "global": "",
                 "back": ""
@@ -75,11 +75,11 @@
 
         },
         {
-            "name": "Hoodie",
-            "colors": ["#00ff00","#1250c4"],
+            "name": "Beanie",
+            "colors": ["#355EA0","#D72E56"],
             "price": 89.99,
             "img": {
-                "front-main": "tshirtExample2.png",
+                "front-main": "tshirtExample7.png",
                 "front-zoom": "",
                 "global": "",
                 "back": ""
