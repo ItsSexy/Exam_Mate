@@ -16,7 +16,7 @@
   }
 
 .slideUp {
-    animation: slideUp 0.2s ease-out both;
+    -webkit-animation: slideUp 0.2s ease-out both;
     animation-timeline: view();
     animation-range: entry 30% entry 80%;
 }
@@ -39,7 +39,7 @@
   }
 
 .slideRight::before {
-    animation: slideRight 0.2s ease-out both;
+    -webkit-animation: slideRight 0.2s ease-out both;
     animation-timeline: view();
     animation-range: entry 200% entry 400%;
 }
