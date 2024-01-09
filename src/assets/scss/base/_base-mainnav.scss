@@ -20,27 +20,7 @@ MAIN NAV
   display: flex;
   flex-direction: row;
   align-items: center;
-
-}
-
-.mainnav__logo {
-
-  margin-inline-end: auto;
-
-}
-
-.mainnav__item {
-
-  height: calc(30/16*1rem);
-  display: flex;
-  align-items: center;
-
-}
-
-.mainnav__img {
-
-  width: 100%;
-  max-height: 100%;
+  justify-content: start;
 
 }
 
@@ -48,13 +28,48 @@ MAIN NAV
 
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 
   gap: calc(78 / 16 * 1rem);
   list-style: none;
 
+  width: 100%;
+  height: 100%;
+
 }
+
+
+.mainnav__item {
+
+  height: 30px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.mainnav__item:first-child {
+
+  justify-content: start;
+
+}
+
+.mainnav__item:last-child {
+
+  justify-content: end;
+
+}
+
+.mainnav__img {
+
+  max-height: 100%;
+  min-width: 24px;
+
+}
+
 
 /* ==============================
 MOBILE NAV
@@ -81,19 +96,19 @@ MOBILE NAV
   width: 100%;
 
   height: calc(60 / 16 * 1rem);
-  padding-inline: 36px;
+  padding: 15px 36px;
 
 }
 
-.visible__list {
+.mobile__list {
 
   display: flex;
   flex-direction: row;
-
-  height: 100%;
-
   justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+  height: 100%;
 
 }
 
@@ -111,6 +126,8 @@ MOBILE NAV
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: calc(60 / 16 * 1rem) 1fr;
+  align-items: center;
+  justify-content: center;
 
   position: fixed;
   top: 0;
@@ -124,17 +141,12 @@ MOBILE NAV
 
   grid-area: 0 1;
 
-  display: flex;
-  flex-direction: row;
-
   box-sizing: border-box;
   
   width: 100%;
   height: 100%;
   padding-inline: 36px;
 
-  justify-content: space-between;
-  align-items: center;
 }
 
 .hidden__list {
