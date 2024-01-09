@@ -1,0 +1,32 @@
+.black__button {
+
+    display: block;
+    box-sizing: content-box;
+
+	color: var(--color-text-light);
+	font-size: calc(14 / 16 * 1 rem);
+    font-weight: 800;
+
+	background-color: var(--color-background-dark);
+	border-radius: 42px;
+    border: 0px solid #000000;
+
+	padding: 6px 24px;
+
+	text-decoration: none;
+    cursor: pointer;
+
+    text-align: center;
+
+}
+
+@media all and (min-width: 750px){
+
+    .black__button {
+
+        font-size: calc(16 / 16 * 1 rem);
+        padding: 6px 36px;
+        
+    }
+
+}

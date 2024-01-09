@@ -229,32 +229,13 @@
 
 .filters__button {
 
-    display: block;
-    width: 84px;
-    box-sizing: content-box;
-
-	color: var(--color-text-light);
-	font-size: calc(14 / 16 * 1 rem);
-    font-weight: 800;
-
-	background-color: var(--color-background-dark);
-	border-radius: 42px;
-    border: 0px solid #000000;
-
     margin-top: 30px;
-	padding:8px 18px;
-
-	text-decoration: none;
-    cursor: pointer;
 
 }
 
 @media all and (min-width:750px){
 
     .filters__button {
-
-        width: 102px;
-
         position: absolute;
         bottom: 0;
         right: 66px;

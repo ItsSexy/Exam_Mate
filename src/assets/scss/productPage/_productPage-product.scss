@@ -424,27 +424,13 @@
 }
 
 .simproducts__button{
-    height: 24px;
-    width: fit-content;
+
+    width: 50%;
 
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
-    align-self: center;
-
-    white-space: nowrap;
-
-    padding-inline: 12px;
-    border-radius: 99px;
-
-    background-color: var(--color-background-dark);
-    color: var(--color-text-light);
-    
-    font-size: 0.75rem;
-    font-weight: bold;
-
-    cursor: pointer;
 }
 
 @media all and (min-width:750px){
