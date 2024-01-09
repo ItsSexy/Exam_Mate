@@ -24,6 +24,27 @@ MAIN NAV
 
 }
 
+
+@media all and (min-width:1024px){ 
+
+  .mainnav {
+  
+    padding-inline: 120px;
+  
+  }
+
+}
+
+@media all and (min-width:1440px){ 
+
+  .mainnav {
+
+    padding-inline: 180px;
+  
+  }
+
+}
+
 .mainnav__list {
 
   display: flex;
@@ -74,7 +95,7 @@ MAIN NAV
 
   width: 100%;
   min-width: 72px;
-  
+
 }
 
 
