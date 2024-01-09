@@ -425,7 +425,7 @@
 
 .simproducts__button{
 
-    width: 50%;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -462,7 +462,7 @@
         flex-direction: row;
     }
     .simproducts__button{
-        font-size: 1rem;
+        width: 60%;
     }
     .simproducts__name{
         font-size: 1rem;
