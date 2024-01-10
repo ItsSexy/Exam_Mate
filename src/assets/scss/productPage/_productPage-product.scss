@@ -26,6 +26,10 @@
     gap: 12px;
 }
 
+.product__similar{
+    margin-block: 60px;
+}
+
 .product__images{
     display: flex;
     flex-direction: row;
@@ -166,6 +170,9 @@
 @media all and (min-width:1024px){
     .product__path{
         margin-bottom: 60px;
+    }
+    .product__similar{
+        margin-block: 156px;
     }
 }
 
