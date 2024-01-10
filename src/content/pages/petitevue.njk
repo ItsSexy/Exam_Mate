@@ -1,0 +1,57 @@
+---
+permalink: /test.html
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<script type="module">
+
+    import { createApp } from 'https://unpkg.com/petite-vue?module'
+  
+    createApp({
+        // exposed to all expressions
+        count: 0,
+        products: [],
+        displayedProducts: [], 
+        searchQuery: "",
+
+        // methods
+        async getProducts() {
+            const data = await fetch("./api/products.json");
+            const jsonData = await data.json();
+            console.log(jsonData.data);
+            this.products = jsonData.data;
+            this.displayedProducts = this.products;
+        },
+
+        get reverse() {
+            this.displayedProducts.reverse();
+        },
+
+        filterProducts(string) {
+            const filteredProducts = this.products.filter((product) => {
+                return product.name.includes(string);
+            });
+            
+            this.displayedProducts = filteredProducts;
+        },
+
+        }).mount("#app")
+  </script>
+  
+  <!-- v-scope value can be omitted -->
+  <h2>Vue app</h2>
+  <div id="app"  @vue:mounted="getProducts();">
+    <div v-for="product in displayedProducts">
+        <p v-text="product.name"></p>
+    </div>
+    <button @click="reverse">Reverse</button>
+    <form>
+        <input type="text" v-model="searchQuery">
+        <input @click.prevent="filterProducts(searchQuery)" type="submit" value="search">
+    </form>
+  </div>
+
+{% endblock %}
